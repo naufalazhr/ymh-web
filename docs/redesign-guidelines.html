@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Guidelines Redesign Web — Yamaha Gerbang Cahaya</title>
+<style>
+  :root{--brand:#1a2bbf;--ink:#101014;--muted:#5b5e66;--line:#e2e2e6;--wash:#f4f4f5}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;background:#2b2b30;color:var(--ink)}
+  .deck{max-width:1280px;margin:0 auto;padding:28px;display:grid;gap:28px}
+  .slide{background:#fff;border-radius:10px;overflow:hidden;display:grid;grid-template-columns:1fr 1.35fr;min-height:560px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+  .slide .txt{padding:56px 52px;display:flex;flex-direction:column;justify-content:center}
+  .slide .txt.center{grid-column:1/-1;text-align:center;align-items:center}
+  .kicker{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--brand);font-weight:700}
+  .num{font-size:13px;font-weight:700;color:#b9bcc2;letter-spacing:.2em;margin-bottom:14px}
+  h1{font-size:52px;line-height:1.08;letter-spacing:-.01em;margin:12px 0 16px}
+  h2{font-size:34px;line-height:1.15;margin:10px 0 14px}
+  p.sub{font-size:17px;color:var(--muted);line-height:1.6}
+  ul{margin-top:18px;display:grid;gap:11px;list-style:none}
+  ul li{font-size:15.5px;line-height:1.5;padding-left:26px;position:relative;color:#2c2e33}
+  ul li::before{content:"";position:absolute;left:2px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--brand)}
+  ul li b{color:var(--ink)}
+  .shot{background:var(--wash);display:flex;align-items:center;justify-content:center;padding:34px;min-width:0}
+  .shot img{max-width:100%;max-height:490px;border-radius:6px;box-shadow:0 14px 40px rgba(10,12,30,.25);object-fit:contain}
+  .shot.tall img{max-height:490px}
+  .cover{background:linear-gradient(135deg,#0b0b0d 55%,#1a2bbf 130%);color:#fff;grid-template-columns:1fr;text-align:left}
+  .cover .txt{padding:70px}
+  .cover h1{font-size:60px;color:#fff}
+  .cover p.sub{color:#b9bcc4}
+  .cover .meta{margin-top:26px;font-size:14px;color:#8b8f98;letter-spacing:.06em}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+  .cols div{background:var(--wash);border-radius:8px;padding:18px 20px;font-size:14.5px;line-height:1.55}
+  .cols b{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin-bottom:6px}
+  @page{size:13.33in 7.5in;margin:0}
+  @media print{
+    body{background:#fff}
+    .deck{padding:0;gap:0;max-width:none;display:block}
+    .slide{border-radius:0;box-shadow:none;height:7.5in;min-height:7.5in;page-break-after:always;break-inside:avoid}
+    .slide .txt{padding:48px}
+    .shot img{max-height:6.2in}
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+<!-- 1 COVER -->
+<section class="slide cover"><div class="txt">
+<div class="kicker" style="color:#9aa2ff">Guidelines Redesign Website</div>
+<h1>Yamaha Gerbang Cahaya</h1>
+<p class="sub">Dari website katalog biasa menjadi mesin penjualan digital: modern, cepat, mudah ditemukan Google &amp; AI, dan mengarahkan pengunjung ke WhatsApp, test ride, dan booking servis.</p>
+<div class="meta">Disusun Oktober 2026 &middot; Live: yamahagerbangcahaya.id (staging: ymh-web.naufal-vaultwork.workers.dev)</div>
+</div></section>
+
+<!-- 2 MASALAH & TUJUAN -->
+<section class="slide"><div class="txt">
+<div class="num">01 / 11</div><div class="kicker">Latar Belakang</div>
+<h2>Kenapa website lama harus dirombak total?</h2>
+<ul>
+<li><b>Tampilan usang:</b> template WordPress generik, tidak mencerminkan brand Yamaha.</li>
+<li><b>Sulit ditemukan:</b> judul, deskripsi, dan struktur tidak ramah mesin pencari.</li>
+<li><b>Tidak mengarahkan aksi:</b> pengunjung bingung harus klik apa untuk beli, servis, atau tanya harga.</li>
+<li><b>Berat &amp; lambat:</b> banyak plugin, gambar tak teroptimasi.</li>
+</ul>
+</div><div class="shot"><img src="img/hero.png" alt="Tampilan baru halaman utama"></div></section>
+
+<!-- 3 BAHASA DESAIN -->
+<section class="slide"><div class="txt">
+<div class="num">02 / 11</div><div class="kicker">Bahasa Desain</div>
+<h2>Terinspirasi ducati.com, disesuaikan Yamaha</h2>
+<ul>
+<li><b>Hero full-screen</b> dengan foto sinematik + headline besar.</li>
+<li><b>Strip kategori miring</b> yang editorial dan berani.</li>
+<li><b>Tombol kotak tegas</b> huruf kapital — kesan premium.</li>
+<li><b>Biru Yamaha</b> sebagai warna aksi menggantikan merah Ducati.</li>
+<li><b>Tipografi Oswald + Inter:</b> tegas untuk judul, jernih untuk isi.</li>
+</ul>
+</div><div class="shot"><img src="img/range.png" alt="Strip kategori model"></div></section>
+
+<!-- 4 STRUKTUR -->
+<section class="slide"><div class="txt">
+<div class="num">03 / 11</div><div class="kicker">Struktur Website</div>
+<h2>21 halaman dengan alur yang jelas</h2>
+<ul>
+<li><b>Beranda</b> — hero, line-up, sorotan NMAX, promo, berita, FAQ, cabang.</li>
+<li><b>9 halaman detail motor</b> — NMAX, Aerox, Fazzio, Filano, Gear, R25, WR, Jupiter + spek &amp; fitur.</li>
+<li><b>Promo, Layanan, Tentang, Kontak</b> — masing-masing satu tujuan.</li>
+<li><b>Booking Servis, Test Ride</b> — formulir yang bermuara ke WhatsApp admin.</li>
+<li><b>3 artikel berita</b> — ditulis ulang, bersih, dan mudah dikutip.</li>
+</ul>
+</div><div class="shot"><img src="img/produk.png" alt="Katalog model"></div></section>
+
+<!-- 5 KALKULATOR -->
+<section class="slide"><div class="txt">
+<div class="num">04 / 11</div><div class="kicker">Fitur Unggulan</div>
+<h2>Kalkulator simulasi kredit</h2>
+<ul>
+<li>Pilih motor &rarr; OTR terisi otomatis (bisa diubah manual).</li>
+<li><b>Geser DP 10–50%</b>, pilih tenor 11–35 bulan via chip.</li>
+<li>Hasil angsuran + rincian DP &amp; pokok langsung tampil.</li>
+<li>Satu klik <b>“Minta Hitungan Resmi”</b> mengirim semua parameter ke WA admin.</li>
+</ul>
+</div><div class="shot"><img src="img/kalkulator.png" alt="Kalkulator kredit"></div></section>
+
+<!-- 6 TEST RIDE -->
+<section class="slide"><div class="txt">
+<div class="num">05 / 11</div><div class="kicker">Fitur Unggulan</div>
+<h2>Test ride &amp; booking servis</h2>
+<ul>
+<li><b>Test ride:</b> pilih model, cabang, tanggal — terkirim rapi ke WA admin penjualan.</li>
+<li><b>Booking servis:</b> pilih 1 dari 4 paket (Berkala, Injeksi, Overhaul CVT, Throttle Body) + jam kedatangan.</li>
+<li><b>Harga jasa transparan</b> per tipe motor, diambil dari pricelist resmi bengkel.</li>
+<li>Tombol layanan di semua halaman mengarah ke formulir ini.</li>
+</ul>
+</div><div class="shot"><img src="img/testride.png" alt="Formulir test ride"></div></section>
+
+<!-- 7 BOOKING -->
+<section class="slide"><div class="txt">
+<div class="num">06 / 11</div><div class="kicker">Fitur Unggulan</div>
+<h2>Harga servis transparan</h2>
+<ul>
+<li>4 kartu paket dengan interval KM dan harga mulai.</li>
+<li>Tabel harga per tipe motor — mis. NMAX/Aerox, matic 125, sport.</li>
+<li>Contoh: Overhaul CVT NMAX <b>Rp 105.000</b>, KSG <b>gratis</b>.</li>
+<li>FAQ booking + schema agar bisa muncul di hasil Google.</li>
+</ul>
+</div><div class="shot"><img src="img/booking.png" alt="Daftar harga servis"></div></section>
+
+<!-- 8 SEO GEO -->
+<section class="slide"><div class="txt center">
+<div class="num">07 / 11</div><div class="kicker">SEO &amp; GEO</div>
+<h2>Ditemukan Google, dikutip AI</h2>
+<div class="cols" style="text-align:left;max-width:900px">
+<div><b>SEO klasik</b>Judul &amp; deskripsi unik per halaman, URL bersih, sitemap, gambar ringan, schema AutoDealer/Product/FAQ.</div>
+<div><b>GEO (AI search)</b>File llms.txt + jawaban FAQ yang padat dan faktual agar mudah dikutip ChatGPT, Gemini, dan AI Overview.</div>
+</div>
+</div></section>
+
+<!-- 9 KONTAK -->
+<section class="slide"><div class="txt">
+<div class="num">08 / 11</div><div class="kicker">Konversi &amp; Kepercayaan</div>
+<h2>Setiap halaman mengarah ke aksi</h2>
+<ul>
+<li><b>Status buka/tutup real-time</b> mengikuti jam operasional WIB.</li>
+<li><b>Peta + 3 kartu cabang</b> (Kopo, Soekarno-Hatta, Subang) dengan tombol Rute &amp; Chat.</li>
+<li><b>Testimoni pelanggan</b> per cabang sebagai bukti sosial.</li>
+<li>Tombol mengambang: kalkulator, test ride, WhatsApp — selalu dalam jangkauan.</li>
+</ul>
+</div><div class="shot"><img src="img/kontak.png" alt="Peta dan cabang"></div></section>
+
+<!-- 10 MOBILE -->
+<section class="slide"><div class="txt">
+<div class="num">09 / 11</div><div class="kicker">Mobile-First</div>
+<h2>Mayoritas pengunjung dari HP</h2>
+<ul>
+<li>Menu hamburger + navigasi layar penuh yang rapi.</li>
+<li><b>Bar bawah lengket:</b> Telepon, WhatsApp, Booking — selalu terlihat.</li>
+<li>Kalkulator menumpuk vertikal: hasil di atas, input di bawah.</li>
+<li>Formulir satu kolom, tombol full-width mudah disentuh.</li>
+</ul>
+</div><div class="shot tall"><img src="img/mobile.png" alt="Tampilan mobile"></div></section>
+
+<!-- 11 TEKNIS -->
+<section class="slide"><div class="txt center">
+<div class="num">10 / 11</div><div class="kicker">Teknis</div>
+<h2>Ringan, cepat, aman</h2>
+<div class="cols" style="text-align:left;max-width:940px">
+<div><b>Static + edge network</b>Hosting Cloudflare Workers — halaman disajikan dari server terdekat, tanpa database yang bisa diretas.</div>
+<div><b>Total hanya ±1,2 MB</b>Gambar WebP teroptimasi, tanpa plugin berat — skor kecepatan jauh di atas website lama.</div>
+</div>
+</div></section>
+
+<!-- 12 PENUTUP -->
+<section class="slide cover"><div class="txt">
+<div class="kicker" style="color:#9aa2ff">Penutup</div>
+<h1>Siap menerima pelanggan dari Google, AI, dan WhatsApp.</h1>
+<p class="sub">Langkah berikut yang disarankan: sambungkan domain utama, daftarkan ke Google Search Console &amp; Google Business Profile per cabang, lalu tambah artikel promo tiap bulan.</p>
+<div class="meta">Yamaha Gerbang Cahaya &middot; PT Gerbang Cahaya Kencana Surya &middot; Oktober 2026</div>
+</div></section>
+
+</div>
+</body>
+</html>
