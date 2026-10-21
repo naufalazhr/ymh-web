@@ -1,0 +1,7 @@
+name = "ymh-web"
+account_id = "ef9e3d26f9ba16aad8c19ccf6d7811e1"
+compatibility_date = "2025-06-01"
+
+[assets]
+directory = "./site"
+not_found_handling = "404-page"
